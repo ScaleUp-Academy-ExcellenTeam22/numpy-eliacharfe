@@ -15,11 +15,7 @@ def find_number_days_between_2_dates(first_date: str, second_date: str) -> np.ti
         if first_date > second_date:
             raise ValueError("The first date should be before the second date")
         return np.datetime64(second_date) - np.datetime64(first_date)
-    except UnboundLocalError as e:
-        print(e)
-    except ValueError as e:
-        print(e)
-    except TypeError as e:
+    except (UnboundLocalError, ValueError, TypeError) as e:
         print(e)
 
 
