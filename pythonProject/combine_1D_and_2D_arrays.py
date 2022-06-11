@@ -21,8 +21,8 @@ def create_1d_2d_arrays_combine_them_display_elements() -> None:
     arr_1d = np.arange(4)
     arr_2d = np.arange(8).reshape(2, 4)
 
-    for elem_1D, elem_2D in generate_combination_1d_and_2d_arrays(arr_1d, arr_2d):
-        print(f"elem 1D: {elem_1D}, elem 2D: {elem_2D}")
+    print("\n".join([f"elem 1D: {elem_1D}, elem 2D: {elem_2D}"
+                     for elem_1D, elem_2D in generate_combination_1d_and_2d_arrays(arr_1d, arr_2d)]))
 
 
 if __name__ == '__main__':
